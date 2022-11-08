@@ -42,6 +42,7 @@ kubeadm join <control-plane-host>:<control-plane-port> --token <token> --discove
 
 #  Install a Pod network add-on with the following command on the control-plane node or a node that has the kubeconfig credentials:
   This will install weave network add-on
+  https://www.weave.works/docs/net/latest/kubernetes/kube-addon/
 
 ```sh
   kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
