@@ -32,3 +32,9 @@ kubeadm join <control-plane-host>:<control-plane-port> --token <token> --discove
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
+
+#  Install a Pod network add-on with the following command on the control-plane node or a node that has the kubeconfig credentials:
+
+```sh
+kubectl apply -f https://projectcalico.docs.tigera.io/v3.22/manifests/calico.yaml
+```
