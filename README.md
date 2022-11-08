@@ -1,4 +1,4 @@
-
+# Please use minimum instance_type = t2.medium
 # Install Docker
 ```sh
 sudo hostnamectl set-hostname kubeadm-server
