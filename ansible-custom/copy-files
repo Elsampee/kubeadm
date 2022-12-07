@@ -1,0 +1,19 @@
+- hosts: localhost
+  become: true
+  tasks:
+  - name: install packages
+    package:
+      name: ['zip','nano','tree','unzip','wget']
+      state: latest
+  - name: copy files
+    shell: cp  * tesla/
+    ignore_errors: true
+  - name: create archive
+    shell: zip tesla.zip tesla
+
+- hosts: web
+  tasks:
+  - name: copy files
+    copy:
+      src: tesla.zip
+      dest: /tmp/
